@@ -10,10 +10,11 @@ import Foundation
 
 struct Countryinfo:Decodable {
     
-    let name       : String
-    var capital    : String
-    let flag       : String
-    let region     : String
-    let population : Int
+    let name        : String
+    var capital     : String
+    let flag        : String
+    let region      : String
+    let population  : Int
+    let alpha2Code  : String
     
 }

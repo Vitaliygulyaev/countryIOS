@@ -47,7 +47,6 @@ class CountryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textCountry.text = country?.name
-        //textCapital.text = country?.capital
         if country?.capital == "" {
             country?.capital = "there is no such"
             self.textCapital.text = country?.capital
@@ -56,9 +55,11 @@ class CountryViewController: UIViewController {
         }
         textRegion.text = country?.region
         Population.text = "\((country?.population)!)"
-        let urlString = country?.flag
         
-        let url = URL(string: urlString!)
+        let urlString = "http://www.countryflags.io/"+(country?.alpha2Code)!+"/flat/64.png"
+        print(urlString)
+        
+        let url = URL(string: urlString)
         
         imageView.downloadedFrom(url: url!)
         

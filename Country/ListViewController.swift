@@ -13,7 +13,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var reuseIdentifire = "Country"
+    
     var countries = [Countryinfo]()
     
     override func viewDidLoad() {
